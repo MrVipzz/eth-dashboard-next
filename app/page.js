@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 
 // === Simple config ===
 // You own 4.5 ETH (you told me earlier). We’ll make this an env var later.
-const ETH_AMOUNT = 4.5;
+const ETH_AMOUNT = Number.parseFloat(process.env.NEXT_PUBLIC_ETH_AMOUNT ?? '0') || 0;
 
 // Format numbers as USD nicely
 function formatUSD(n) {
